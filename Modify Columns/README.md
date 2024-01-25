@@ -1,0 +1,1 @@
+Ao multiplicar coluna de dataframe do pandas eu multiplico cada valor separadamente
