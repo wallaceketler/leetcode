@@ -4,11 +4,11 @@ Letters are case sensitive, so "a" is considered a different type of stone from 
 
 Example 1:
 
-Input: jewels = "aA", stones = "aAAbbbb" Output: 3
+    Input: jewels = "aA", stones = "aAAbbbb" Output: 3
 
 Example 2:
 
-Input: jewels = "z", stones = "ZZ" Output: 0
+    Input: jewels = "z", stones = "ZZ" Output: 0
 
 Constraints:
 
