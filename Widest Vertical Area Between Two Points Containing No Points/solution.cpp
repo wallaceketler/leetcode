@@ -2,21 +2,14 @@ class Solution {
 public:
     int maxWidthOfVerticalArea(vector<vector<int>>& points) {
         int max = 0;
-        bool error = false;
+        vector<int> xPos;
         for(size_t i = 0; i < points.size(); ++i){
-            for(size_t j = 0; j < points.size(); ++j){
-                if(fabs(points[i][0] - points[j][0]) > max){
-                    if(points[i][0] < points[j][0]){
-                        for(size_t k = 0; k < points.size(); ++k){
-                            if(points[k][0] > points[i][0] && points[k][0] < points[j][0]){
-                                error = true;
-                            }
-                        }
-                        if(!error){
-                            max = fabs(points[i][0] - points[j][0]);
-                        }
-                    }
-                }
+            xPos.push_back(points[i][0]);
+        }
+        sort(xPos.begin(), xPos.end());
+        for(size_t i = 1; i < xPos.size(); ++i){
+            if(fabs(xPos[i] - xPos[i-1]) > max){
+               max = fabs(xPos[i] - xPos[i - 1]); 
             }
         }
         return max;
